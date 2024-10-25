@@ -52,9 +52,15 @@ Gracias a esta dependencia en una abstracción, si en el futuro se quiere añadi
 Este diseño desacoplado permite que ReportService sea independiente de las clases específicas de generación de reportes, mejorando la flexibilidad y extensibilidad del sistema.
 
 Resumen de Cómo Cada Principio SOLID se Aplica en el Sistema de Reportes
+
 SRP: Cada clase tiene una sola responsabilidad (formato específico o gestión de reportes).
+
 OCP: Podemos agregar nuevos formatos de reporte sin modificar las clases existentes.
+
 LSP: Cualquier implementación de ReportGenerator puede reemplazar a otra sin alterar el comportamiento de ReportService.
+
 ISP: La interfaz ReportGenerator está enfocada únicamente en la generación de reportes, sin métodos adicionales innecesarios.
+
 DIP: ReportService depende de la interfaz ReportGenerator en lugar de implementaciones concretas, permitiendo flexibilidad en la elección del formato de reporte.
+
 Este diseño cumple con los principios SOLID, manteniendo el sistema modular, extensible y fácil de mantener. Cada nuevo tipo de reporte se puede agregar sin alterar el sistema, y el código es más claro y fácil de testear debido a su estructura modular.
